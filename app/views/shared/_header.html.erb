@@ -1,0 +1,28 @@
+<nav class="light-blue accent-1">
+  <div class="nav-wrapper">
+
+    <!-- <%= form_tag("/search", method: "get") do %>
+      <%= text_field_tag(:q)%>
+      <label class="label-icon right" for="search"><i class="material-icons">search</i></label>
+    <% end %> -->
+
+    <%= link_to 'Home',home_index_path,class:"brand-logo left"%>
+
+    <ul id="nav-right-mobile"class="right hide-on-med-and-down">
+
+      <li>
+        <%= link_to sign_up_path, method: :get do %>
+        Cadastrar<i class="material-icons right">input</i>
+        <% end %>
+      </li>
+      <li class="blue lighten-2" >
+        <%= link_to new_user_session_path, method: :get do %>
+        Entrar<i class="material-icons right">power_settings_new</i>
+        <% end %>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+</header>

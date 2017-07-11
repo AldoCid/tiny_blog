@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  footer.page-footer {
+    padding-top: 0px !important;
+  }
+
+ nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+   height: 100%;
+   width: 50%;
+ }
