@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  get 'home/index'
 
-  devise_for :user
+  get 'home/index'
+  root to: "home#index"
+
+
+  devise_for :user,controllers: {
+    registrations: 'user/registrations'
+  }
 
   devise_scope :user do
     get 'login',to: 'devise/sessions#new'
@@ -9,7 +14,8 @@ Rails.application.routes.draw do
     get 'sign_up',to: 'devise/registrations#new'
   end
 
-  root to: "home#index"
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/user/profile', to:"profile#show", as: "user_profile"
+
+
 end

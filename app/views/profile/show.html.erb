@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">
+    <% if @current_user.avatar %>
+      <div class="center">
+          <%= image_tag @current_user.avatar.url,class:"circle responsive-img" %>
+      </div>
+    <% else %>
+      <img class="circle responsive-img" src="https://lh3.googleusercontent.com/-W2XryVdi-lA/U6tSAh3SsbI/AAAAAAAAFGY/ZHJiUEcR_Zs/w480-h480/avatar%2Bmaterial%2Bdesign.png" alt="" />
+    <% end %>
+    <br>
+    <div class="center">
+      <%= @current_user.email %>
+    </div>
+  </div>
+</div>

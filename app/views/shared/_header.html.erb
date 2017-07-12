@@ -6,22 +6,41 @@
       <label class="label-icon right" for="search"><i class="material-icons">search</i></label>
     <% end %> -->
 
-    <%= link_to 'Home',home_index_path,class:"brand-logo left"%>
 
-    <ul id="nav-right-mobile"class="right hide-on-med-and-down">
+    <%= link_to 'Home',home_index_path,class:"brand-logo center"%>
+    <% if user_signed_in? %>
 
-      <li>
-        <%= link_to sign_up_path, method: :get do %>
-        Cadastrar<i class="material-icons right">input</i>
-        <% end %>
-      </li>
-      <li class="blue lighten-2" >
-        <%= link_to new_user_session_path, method: :get do %>
-        Entrar<i class="material-icons right">power_settings_new</i>
-        <% end %>
-      </li>
+      <ul id="nav-right-mobile"class="right hide-on-med-and-down">
 
-    </ul>
+        <li class="light-blue accent-1" >
+          <%= link_to user_profile_path, method: :get do %>
+          Perfil<i class="material-icons right">perm_identity</i>
+          <% end %>
+        </li>
+
+        <li class="red lighten-3" >
+          <%= link_to destroy_user_session_path, method: :delete do %>
+          Sair<i class="material-icons right">power_settings_new</i>
+          <% end %>
+        </li>
+      </ul>
+
+    <% else %>
+      <ul id="nav-right-mobile"class="right hide-on-med-and-down">
+
+        <li>
+          <%= link_to sign_up_path, method: :get do %>
+          Cadastrar<i class="material-icons right">input</i>
+          <% end %>
+        </li>
+        <li class="blue lighten-2" >
+          <%= link_to new_user_session_path, method: :get do %>
+          Entrar<i class="material-icons right">power_settings_new</i>
+          <% end %>
+        </li>
+
+      </ul>
+    <% end%>
 
   </div>
 </nav>
