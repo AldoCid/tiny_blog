@@ -37,3 +37,13 @@ body {
    display: inline;
    list-style-type: none;
  }
+
+ .mat-input {
+  position: relative;
+  background: transparent;
+  width: 50%;
+  border: none;
+  outline: none;
+  padding: 8px 0;
+  font-size: 16px;
+}

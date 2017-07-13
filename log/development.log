@@ -6467,3 +6467,2106 @@ Processing by UserController#show_user_posts as HTML
 Completed 200 OK in 64ms (Views: 53.9ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/user/profile" for 127.0.0.1 at 2017-07-13 10:04:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"profile"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 47ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=profile):
+  
+app/controllers/user_controller.rb:18:in `set_user'
+Started GET "/user/profile" for 127.0.0.1 at 2017-07-13 10:04:29 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"profile"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=profile):
+  
+app/controllers/user_controller.rb:18:in `set_user'
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (147.3ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (141.5ms)
+Started GET "/user" for 127.0.0.1 at 2017-07-13 10:04:35 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [25 times] (12.5ms)
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.7ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.4ms)
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:04:39 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 1176ms (Views: 1163.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2017-07-13 10:04:43 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oncanZOeqM3N5mXJKZ+T/XY7m0KkwVwZl5USvxT76E5VQOR0ayx28Ns0S5DjlCGk7q2I1q7i2wzjbUHxdGY1Yw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:04:43 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:04:46 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"EEbMag/6pw3owpJ0nQWfSxhzH7tYE815iHCEbd8gWmx3nHzhtZMHt/stOxBViqBaazFmzxsXVAxV8P++mDPbJw=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:04:53 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yD+oHuBF9quf9rbW2PCOsgtcChOwAvAg+48FP5wdqemv5RiVWixWEYwZH7IQf7GjeB5zZ/MGaVUmD37s2w4oog==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aldocide@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-07-13 13:04:53.635351"], ["last_sign_in_at", "2017-07-12 22:43:04.527780"], ["sign_in_count", 3], ["updated_at", "2017-07-13 13:04:53.637771"], ["id", 6]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 221ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:04:53 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-07-13 10:04:54 -0300
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.3ms)
+  Rendered posts/new.html.erb within layouts/application (7.6ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 100ms (Views: 47.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:04:56 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"Ac7cnzo87oL/blvfPNlXM5bo6RvueGA42Hnb1q29KTmLPY7UrnkfCbuzbPsTPeb8pBEJ3ZO0Ffox29ja3VgeiQ==", "id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (4.3ms)
+  Rendered shared/_header.html.erb (3.7ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 51.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/6/posts" for 127.0.0.1 at 2017-07-13 10:04:59 -0300
+Processing by UserController#show_user_posts as HTML
+  Parameters: {"authenticity_token"=>"Yu8poVhR1CwlKRu3Ya2ctl+6gayhXpJBM37Sb6vwKF/oHHvqzBQlp2H0LJNOSS15bUNhatyS54Pa3NFj2xUf7w==", "id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_user_posts.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered user/show_user_posts.html.erb within layouts/application (24.5ms)
+  Rendered shared/_header.html.erb (5.8ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 96ms (Views: 66.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:05:05 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.2ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 51.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:06:06 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.9ms)
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 41.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2017-07-13 10:07:37 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XKPRC9jc8rNxtA+YIlBLs07TUapc/TQxNbvkJezWbZPWUINATJkDODVpOLwNtPp8fCqxbCExQfPcGecpnDNaIw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:07:37 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-13 10:07:39 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"authenticity_token"=>"jUo4n4Sq67hfAU9vO4ZJ+84o5xKLk7yIpzrcyMMchhm/vpZyopZx59AsppbZcKuaSJTOWxbCxsobciqeHF4A6Q=="}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-13 10:18:22 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"authenticity_token"=>"jUo4n4Sq67hfAU9vO4ZJ+84o5xKLk7yIpzrcyMMchhm/vpZyopZx59AsppbZcKuaSJTOWxbCxsobciqeHF4A6Q=="}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (10.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:18:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"TPXMZ+dOkLQAWuIuwHj6aZFnYOv1nPGo4KqSvvpV3a1+AWKKwXIK6493C9cijhgIF9tJomjNi+pc4mToJRdbXQ=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:18:31 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CerDuuyhBNGkA63Z7tkREJL0XrvBSzGdlpi9/SjYjTg7Hm1Xyp2ejisuRCAML/NxFEh38lwaS98q0Eur95oLyA==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aldocide@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-07-13 13:18:31.225116"], ["last_sign_in_at", "2017-07-13 13:04:53.635351"], ["sign_in_count", 4], ["updated_at", "2017-07-13 13:18:31.226440"], ["id", 6]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 207ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:18:31 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:18:33 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"TFU3ckk6jimvST80BtqRwaSvWvZPcdYgY9TEXntNKMMld6JeJm7IVWU51pwBx8MQR1HN7UsS7fdBTivamVe+vg==", "id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (1.9ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/6/posts" for 127.0.0.1 at 2017-07-13 10:18:34 -0300
+Processing by UserController#show_user_posts as HTML
+  Parameters: {"authenticity_token"=>"NHoZ3J0xHqj0n52LiWg67ssaQvGlquXm5XVxk6pXnHZdWIzw8mVY1D7vdCOOdWg/KOTV6qHJ3jHH754XSE0KCw==", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_user_posts.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 6]]
+  Rendered user/show_user_posts.html.erb within layouts/application (6.5ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 43ms (Views: 36.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:38:41 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:38:50 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"rr41mC05BjAOcNfqT9e1SsUbfEje3ngjb1CfgrRztG/HnKC0Qm1ATMQAPkJIyuebJuXrU9q9Q/RNynAGVmkiEg==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (1.9ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 34.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-07-13 10:38:51 -0300
+Processing by User::RegistrationsController#edit as HTML
+  Parameters: {"authenticity_token"=>"OMdRgfy3hsqxk7DXzdoxGFcaa+A0YYWqArIOUN8bDfpR5cStk+PAtnvjWX/Kx2PJtOT8+zACvn0gKOHUPQGbhw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.0ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:39:02 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (1.8ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:39:04 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 50.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:43:47 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.1ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-07-13 10:43:48 -0300
+Processing by User::RegistrationsController#edit as HTML
+  Parameters: {"authenticity_token"=>"lromEGWNxqsDYs36hvXTASIIT3uRSj8iogPJqgKlVYH/mLM8CtmA18kSJFKB6IHQwfbYYJUpBPWAmSYu4L/D/A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.0ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-07-13 10:43:59 -0300
+Processing by User::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.2ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-07-13 10:44:08 -0300
+Processing by User::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.3ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-07-13 10:44:27 -0300
+Processing by User::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user" for 127.0.0.1 at 2017-07-13 10:44:39 -0300
+Processing by User::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AUthJbda5adSooailfDLlQgt3EswKhhW+visUA5LMOtoafQJ2A6j25jSbwqS7ZlE69NLUDRJI4HYYkPU7FGmlg==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.8ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 252ms (Views: 46.7ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/user" for 127.0.0.1 at 2017-07-13 10:45:11 -0300
+Processing by User::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P3W3/3lVZAdfCfsRglWITFyMeRQTMhMaAxQhhNo3AUNWVyLTFgEie5V5ErmFSNqdv3LuDxdRKM0hjs4AOC2XPg==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fbed1a20e58 @tempfile=#<Tempfile:/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/RackMultipart20170713-88815-hcv551.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Unpermitted parameter: avatar
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:45:11 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:45:14 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"Vk5MxD3722Gs0W7Cf//maBm6WD5GhQJtqTg6R/48U4U/bNnoUq+dHWahh2p44rS5+kTPJULmObqLotXDHCbF+A==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-07-13 10:45:16 -0300
+Processing by User::RegistrationsController#edit as HTML
+  Parameters: {"authenticity_token"=>"PxfYvTGqwr/aosuz1/4eS6o68UbYjfPOryNVwcypMPRWNU2RXv6EwxDSIhvQ40yaScRmXdzuyBmNubpFLrOmiQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.6ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/user" for 127.0.0.1 at 2017-07-13 10:45:54 -0300
+Processing by User::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vncuMwUjUtWlB8sWDGU7iqvb6fymwNK+05WdmPD1dqvXVbsfancUqW93Ir4LeGlbSCV+56Kj6WnxD3IcEu/g1g==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fbed15f5478 @tempfile=#<Tempfile:/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/RackMultipart20170713-88815-1de7d3m.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Unpermitted parameter: avatar
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 207ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:45:54 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:46:38 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"C9DkZdcKJhqNV5F4TgwTkntMTAeIMes7ubcj1iCy2odi8nFJuF5gZkcneNBJEUFDmLLbHIxS0OybLcxSwqhM+g==", "id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (3.6ms)
+  Rendered shared/_header.html.erb (3.2ms)
+  Rendered shared/_footer.html.erb (1.3ms)
+Completed 200 OK in 105ms (Views: 72.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at 2017-07-13 10:46:40 -0300
+Processing by User::RegistrationsController#edit as HTML
+  Parameters: {"authenticity_token"=>"VEYn95MDB0ydIM4ujldNYkuoknREuisw1G/srSRrx449ZLLb/FdBMFdQJ4aJSh+zqFYFb0DZEOf29QMpxnFR8w=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.5ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/user" for 127.0.0.1 at 2017-07-13 10:46:50 -0300
+Processing by User::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hRKgSRl00YCXGFy2k0ynGbsodMVcd5eE0QEv8JQ9K2rsMDVldiCX/F1otR6UUfXIWNbj3lgUrFPzm8B0die9Fw==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fbec9e9cb38 @tempfile=#<Tempfile:/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/RackMultipart20170713-88815-1q266c1.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-1pcv5rl.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-7nyex2.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-7nyex2.jpeg[0]'
+Command :: convert '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-7nyex2.jpeg[0]' -auto-orient -resize "300x300>" '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/a446b658d6691e38f5a1b700ed3b01d920170713-88815-n193tj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-7nyex2.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-7nyex2.jpeg[0]'
+Command :: convert '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-7nyex2.jpeg[0]' -auto-orient -resize "100x100" '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/a446b658d6691e38f5a1b700ed3b01d920170713-88815-18er1jy'
+Command :: file -b --mime '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-88815-oa611n.jpeg'
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "avatar_file_name" = ?, "avatar_content_type" = ?, "avatar_file_size" = ?, "avatar_updated_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["avatar_file_name", "download.jpeg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 8898], ["avatar_updated_at", "2017-07-13 13:46:50.883786"], ["updated_at", "2017-07-13 13:46:51.058599"], ["id", 6]]
+[paperclip] deleting /Users/aldocid/Desktop/blog_he-labs/public/system/users/avatars/000/000/006/original/Foto3x4Aldo.png
+[paperclip] deleting /Users/aldocid/Desktop/blog_he-labs/public/system/users/avatars/000/000/006/medium/Foto3x4Aldo.png
+[paperclip] deleting /Users/aldocid/Desktop/blog_he-labs/public/system/users/avatars/000/000/006/thumb/Foto3x4Aldo.png
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 405ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:46:51 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2017-07-13 10:46:52 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ypD+HXtLXKe8ZctS/YEFsz1kYvJmLp5IAAuPA0LYTSKjsmsxFB8a23YVIvr6nFdi3pr16WJNpZ8ikWCHoMLbXw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:46:52 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:46:53 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"IWqOflYKWsUEmg3fh4zxpPFuxnH62/zt+/EfOGB5IzM1tSjAHtudS1D8DmjwcM8i1pV8eLNntRsOZvXPneQL+g=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:46:54 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hH9yVCp4Kbdx6CjIKOm3j4SxJD8uI2dX4H1mBVKSGOeQoNTqYqnuOSWOK39fFYkJo0qeNmefLqEV6ozyrw8wLg==", "user"=>{"email"=>"aldo.siqueira@edu.unifor.br", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aldo.siqueira@edu.unifor.br"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 179ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hH9yVCp4Kbdx6CjIKOm3j4SxJD8uI2dX4H1mBVKSGOeQoNTqYqnuOSWOK39fFYkJo0qeNmefLqEV6ozyrw8wLg==", "user"=>{"email"=>"aldo.siqueira@edu.unifor.br", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 217ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:47:00 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RtvJ0n1eonQ0QDPBw772M7RjQduWPwm4QjoUDuuI3OdSBG9sNY9l+mAmMHa0Qsi1k5j70t+DQE63rf75FhX0Lg==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aldocide@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 199ms (ActiveRecord: 2.7ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RtvJ0n1eonQ0QDPBw772M7RjQduWPwm4QjoUDuuI3OdSBG9sNY9l+mAmMHa0Qsi1k5j70t+DQE63rf75FhX0Lg==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 221ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2017-07-13 10:47:04 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6OKqzT4eiQvXvoSsIdFv0MGz9P/aeRalijzf7lwn3+z8PQxzds9OhYPYhxtWLVFW5khO9pPFX1N/qzUZobr3JQ==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aldocide@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-07-13 13:47:04.660647"], ["last_sign_in_at", "2017-07-13 13:18:31.225116"], ["sign_in_count", 5], ["updated_at", "2017-07-13 13:47:04.662519"], ["id", 6]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 202ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 10:47:04 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 46ms (Views: 41.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 10:47:05 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"xJlhdlg7abgbN7U4qgL5r55/ix1c8hKX1LqBrN+E2HGPtepemhsjGkDZ2XwpFuJOPwAQHYwitHVLhTNv+2MvpA==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (3.1ms)
+  Rendered shared/_header.html.erb (3.2ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:47:48 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:53:50 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:54:24 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 37.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:55:06 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (2.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:55:55 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:56:25 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:57:53 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:59:36 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:59:37 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:59:39 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:59:39 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 10:59:48 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:00:04 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:00:25 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:04:13 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:04:29 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 11:07:43 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"i8ajFD7tvxEOylDv1g/230YgA4/vIKDEsqLp68tflbDA6ig8/M31s1UkPKtVG+0+51+Yjz/wBiYtnVso77hiZQ==", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (1.7ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 11:08:17 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"ZXmY+/quY2IRrmsXF1OCazEnB/9zB1Rbbesle8F4g9guVRPTOI4pwEpAB1OUR5mKkFic/6PX8rny1Je45Z90DQ==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (1.9ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/6" for 127.0.0.1 at 2017-07-13 11:08:19 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"FcGCerG/NwI8/ASphRlmqH4idCIjdv+Pf4t+zgjBQZJe7QlSc599oGcSaO0GDX1J313vIvOmWW3gtMwNLCa2Rw==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.4ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:08:20 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 49.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2017-07-13 11:08:46 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8cl4YpGNk/UPMK7Ncv97JFUdqjz3v062PV4HicRNHN265fNKU63ZV1Tewonx62DF9GIxPCdv6FSiYbVK4KrrCA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 11:08:46 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2017-07-13 11:08:49 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"YfwCBrxikNPhnFXjXXOvXXDuQa5ZRDyp/6YnfxQW1VpKrozAZRvThefhSxcCagmDsftE0flA2zNucXe8N1HBdQ=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.1ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2017-07-13 11:08:50 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H4mjbNGgZFK+FHIefKEHn7BTO+AA8/umH2M5pWq7uOM02y2qCNknBLhpbOojuKFBcUY+n6D3HDyOtGlmSfyszA==", "user"=>{"email"=>"aldo.siqueira@edu.unifor.br", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aldo.siqueira@edu.unifor.br"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 181ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H4mjbNGgZFK+FHIefKEHn7BTO+AA8/umH2M5pWq7uOM02y2qCNknBLhpbOojuKFBcUY+n6D3HDyOtGlmSfyszA==", "user"=>{"email"=>"aldo.siqueira@edu.unifor.br", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 217ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2017-07-13 11:08:56 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v0n0UNe8/1gdvMVEgsB002MIFBF+sQoAZHMS7t/tFZaUG3qWDsW8DhvB27Dd2dINoh0Rbt617Zr1pEIt/KoBuQ==", "user"=>{"email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aldocide@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-07-13 14:08:56.832730"], ["last_sign_in_at", "2017-07-13 13:47:04.660647"], ["sign_in_count", 6], ["updated_at", "2017-07-13 14:08:56.834885"], ["id", 6]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 208ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-13 11:08:56 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from require at /Users/aldocid/Desktop/blog_he-labs/bin/rails:9)
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20170710234108)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170710234108"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePosts (20170711195524)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "n_likes" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170711195524"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentAvatarToUsers (20170711202841)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentAvatarToUsers < ActiveRecord::Migration[4.2] (called from require at /Users/aldocid/Desktop/blog_he-labs/bin/rails:9)
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "avatar_updated_at" datetime[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170711202841"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttachmentPostImageToPosts (20170711202852)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class AddAttachmentPostImageToPosts < ActiveRecord::Migration[4.2] (called from require at /Users/aldocid/Desktop/blog_he-labs/bin/rails:9)
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_file_name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_content_type" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_file_size" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "posts" ADD "post_image_updated_at" datetime[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170711202852"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-07-13 14:24:05.220788"], ["updated_at", "2017-07-13 14:24:05.220788"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2017-07-13 11:27:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered shared/_header.html.erb (2.6ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 357ms (Views: 329.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-13 11:27:45 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Parameters: {"authenticity_token"=>"92U9LFTvxvFi2MORPAqgeB/z/kcSeus7GjeTvkO62PEQ4CACIbDohO2airS0WVpuiUV3P5vY9NlUBSCIqxCd5Q=="}
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (59.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-13 11:31:34 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (3.6ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2017-07-13 11:31:48 -0300
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ah9uqvkVZLyApgizw5U30yWwecmOa6u994BEciS9baXlmnOEjEpKyQ/kQZZLxs3FswbwsQfJtF+5svdEzBcosQ==", "user"=>{"name"=>"Aldo", "email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fe756abd048 @tempfile=#<Tempfile:/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/RackMultipart20170713-90169-1k0htff.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Unpermitted parameter: name
+Command :: file -b --mime '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-acfbno.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1kqu5vx.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1kqu5vx.jpeg[0]'
+Command :: convert '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1kqu5vx.jpeg[0]' -auto-orient -resize "300x300>" '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/a74f29ee3aba1efbfb305bf43b67091b20170713-90169-b6emoq'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1kqu5vx.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1kqu5vx.jpeg[0]'
+Command :: convert '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1kqu5vx.jpeg[0]' -auto-orient -resize "100x100" '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/a74f29ee3aba1efbfb305bf43b67091b20170713-90169-2tl53l'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-mrmwop.jpeg'
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aldocide@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "aldocide@gmail.com"], ["encrypted_password", "$2a$11$HuAG.GgvaTKTarXfAtwct.mc6x1udKPWod2AAoNUW6T4H4.gck/SK"], ["created_at", "2017-07-13 14:31:55.855286"], ["updated_at", "2017-07-13 14:31:55.855286"], ["avatar_file_name", "download.jpeg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 8898], ["avatar_updated_at", "2017-07-13 14:31:55.606967"]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 7612ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::ConstraintException: NOT NULL constraint failed: users.name: INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)):
+  
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `step'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `block in each'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `loop'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `each'
+activerecord (5.0.4) lib/active_record/connection_adapters/sqlite3_adapter.rb:202:in `to_a'
+activerecord (5.0.4) lib/active_record/connection_adapters/sqlite3_adapter.rb:202:in `block in exec_query'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract_adapter.rb:590:in `block in log'
+activesupport (5.0.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.4) lib/active_record/connection_adapters/sqlite3_adapter.rb:193:in `exec_query'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:92:in `exec_insert'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:124:in `insert'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract/query_cache.rb:17:in `insert'
+activerecord (5.0.4) lib/active_record/relation.rb:65:in `insert'
+activerecord (5.0.4) lib/active_record/persistence.rb:572:in `_create_record'
+activerecord (5.0.4) lib/active_record/counter_cache.rb:128:in `_create_record'
+activerecord (5.0.4) lib/active_record/locking/optimistic.rb:75:in `_create_record'
+activerecord (5.0.4) lib/active_record/attribute_methods/dirty.rb:123:in `_create_record'
+activerecord (5.0.4) lib/active_record/callbacks.rb:302:in `block in _create_record'
+activesupport (5.0.4) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.4) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_create_callbacks'
+activerecord (5.0.4) lib/active_record/callbacks.rb:302:in `_create_record'
+activerecord (5.0.4) lib/active_record/timestamp.rb:68:in `_create_record'
+activerecord (5.0.4) lib/active_record/persistence.rb:548:in `create_or_update'
+activerecord (5.0.4) lib/active_record/callbacks.rb:298:in `block in create_or_update'
+activesupport (5.0.4) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.4) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_save_callbacks'
+activerecord (5.0.4) lib/active_record/callbacks.rb:298:in `create_or_update'
+activerecord (5.0.4) lib/active_record/persistence.rb:129:in `save'
+activerecord (5.0.4) lib/active_record/validations.rb:44:in `save'
+activerecord (5.0.4) lib/active_record/attribute_methods/dirty.rb:22:in `save'
+activerecord (5.0.4) lib/active_record/transactions.rb:319:in `block (2 levels) in save'
+activerecord (5.0.4) lib/active_record/transactions.rb:395:in `block in with_transaction_returning_status'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `block in transaction'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract/transaction.rb:189:in `within_new_transaction'
+activerecord (5.0.4) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.4) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.4) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.4) lib/active_record/transactions.rb:319:in `block in save'
+activerecord (5.0.4) lib/active_record/transactions.rb:334:in `rollback_active_record_state!'
+activerecord (5.0.4) lib/active_record/transactions.rb:318:in `save'
+activerecord (5.0.4) lib/active_record/suppressor.rb:41:in `save'
+devise (4.2.0) app/controllers/devise/registrations_controller.rb:17:in `create'
+actionpack (5.0.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.4) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.4) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.4) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.4) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.4) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.4) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.4) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.4) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.4) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.4) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.4) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.4) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.4) lib/action_dispatch/routing/route_set.rb:725:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.4) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.4) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.4) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.4) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (122.3ms)
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-13 11:35:55 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (4.0ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 47.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2017-07-13 11:36:07 -0300
+Processing by User::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4gj/lt99X2rC30TQFwXdL5HRVZOhK9yATQx8aqedly8DT7QLiLbCCRJNDbID+1iKPHMLscmsJBPBoLHQjQzSA==", "user"=>{"name"=>"Aldo", "email"=>"aldocide@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fe753c874a8 @tempfile=#<Tempfile:/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/RackMultipart20170713-90169-yd3hgj.jpeg>, @original_filename="download.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"download.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Command :: file -b --mime '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1hbtlun.jpeg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1vpcit5.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1vpcit5.jpeg[0]'
+Command :: convert '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1vpcit5.jpeg[0]' -auto-orient -resize "300x300>" '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/4d74e6ad40a9961bb52ebfa9605527a520170713-90169-mqcngo'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1vpcit5.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1vpcit5.jpeg[0]'
+Command :: convert '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1vpcit5.jpeg[0]' -auto-orient -resize "100x100" '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/4d74e6ad40a9961bb52ebfa9605527a520170713-90169-mm5xbb'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/w1/ghxpxjkd3wl4prg8xcwbg1dw0000gn/T/fd456406745d816a45cae554c788e75420170713-90169-1txt3x3.jpeg'
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aldocide@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "created_at", "updated_at", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aldo"], ["email", "aldocide@gmail.com"], ["encrypted_password", "$2a$11$iA5GbAOtmCmwgU5OPz6/i.TAqTlp/BPhwxTpik3BlG4kk2jS2b8WC"], ["created_at", "2017-07-13 14:36:13.328928"], ["updated_at", "2017-07-13 14:36:13.328928"], ["avatar_file_name", "download.jpeg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 8898], ["avatar_updated_at", "2017-07-13 14:36:13.141350"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-07-13 14:36:13.344532"], ["last_sign_in_at", "2017-07-13 14:36:13.344532"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-07-13 14:36:13.345763"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/user/1
+Completed 302 Found in 5601ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2017-07-13 11:36:13 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.6ms)
+  Rendered shared/_header.html.erb (3.1ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 58.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2017-07-13 11:36:35 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.2ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 44.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/user/1/posts" for 127.0.0.1 at 2017-07-13 11:36:49 -0300
+Processing by UserController#show_user_posts as HTML
+  Parameters: {"authenticity_token"=>"4lT0Eb+1ckqSl/jVQSrDV1dLrSc+w/NkcHQ3mvSwRREF0ek/yupcPx3VsfDJeTlBwf0kX7dh7IY+RoSsHBoABQ==", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user/show_user_posts.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered user/show_user_posts.html.erb within layouts/application (7.4ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 44.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2017-07-13 11:36:52 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"authenticity_token"=>"fNDP3cUv0xbVVvQ39QQaApAHj81JExk8NYnMPN8s14SbVdLzsHD9Y1oUvRJ9V+AUBrEGtcCxBt57u38KN4aSkA==", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (2.1ms)
+  Rendered shared/_header.html.erb (3.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at 2017-07-13 11:39:50 -0300
+Processing by UserController#show_profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering user/show_profile.html.erb within layouts/application
+  Rendered user/show_profile.html.erb within layouts/application (1.9ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=" for 127.0.0.1 at 2017-07-13 11:39:54 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=dsadsa" for 127.0.0.1 at 2017-07-13 11:40:00 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"dsadsa"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=dsadsa" for 127.0.0.1 at 2017-07-13 11:40:16 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"dsadsa"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=dsadsa" for 127.0.0.1 at 2017-07-13 11:40:32 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"dsadsa"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.7ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=dsadsa" for 127.0.0.1 at 2017-07-13 11:43:02 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"dsadsa"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:45:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (9.3ms)
+  Rendered shared/_header.html.erb (3.4ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 387ms (Views: 348.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:48:02 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:48:17 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:48:40 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (2.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 74ms (Views: 70.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:48:47 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:49:17 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:49:33 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_header.html.erb (4.3ms)
+  Rendered shared/_footer.html.erb (1.2ms)
+Completed 200 OK in 77ms (Views: 73.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:52:54 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:53:12 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:53:54 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+  Rendered shared/_header.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:54:02 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:57:58 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 11:58:20 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 31.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-13 12:56:22 -0300
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/home?utf8=%E2%9C%93&q=Aldo" for 127.0.0.1 at 2017-07-13 12:56:39 -0300
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 16556ms (Views: 41.9ms | ActiveRecord: 1.1ms)
+
+
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Aldo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 7938ms (Views: 32.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=Aldo" for 127.0.0.1 at 2017-07-13 12:58:50 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Aldo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_header.html.erb (1.9ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 3405ms (Views: 38.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=Aldo" for 127.0.0.1 at 2017-07-13 12:59:29 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Aldo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 2537ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=Aldo" for 127.0.0.1 at 2017-07-13 12:59:41 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Aldo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 35.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=Aldo" for 127.0.0.1 at 2017-07-13 13:02:18 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Aldo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&q=Aldo" for 127.0.0.1 at 2017-07-13 13:04:21 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Aldo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_field' for nil:NilClass):
+    1: 
+    2: <%= form_tag(home_path, method: :get) do |f| %>
+    3:   <ul class="inline">
+    4:     <%= f.text_field 'search_field', placeholder: 'Buscar por usuário'%>
+    5:     <%= submit_tag 'Buscar' ,class: "waves-effect waves-light light-blue accent-3 btn"%>
+    6:   </ul>
+    7: <% end %>
+  
+app/views/posts/index.html.erb:4:in `block in _app_views_posts_index_html_erb___4396047154635061660_70151677713880'
+app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4396047154635061660_70151677713880'
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (102.7ms)
+Started GET "/home?utf8=%E2%9C%93&q=Aldo" for 127.0.0.1 at 2017-07-13 13:04:53 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"Aldo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:04:58 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:04:59 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_header.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:05:00 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_header.html.erb (2.4ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:05:01 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.6ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:05:02 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:05:02 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:07:43 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:09:32 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:09:33 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:10:54 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:21 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:22 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:23 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:38 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:39 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:54 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:55 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:55 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.7ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:57 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:58 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:18:59 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:19:20 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:19:30 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:19:48 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:20:02 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+  Rendered shared/_header.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:24:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (11.1ms)
+  Rendered shared/_header.html.erb (3.1ms)
+  Rendered shared/_footer.html.erb (10.8ms)
+Completed 200 OK in 428ms (Views: 384.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:27:33 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.1ms)
+  Rendered shared/_header.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:33:57 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.2ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=%7B%3Aplaceholder%3D%3E%22Buscar+por+usu%C3%A1rio%22%7D&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:50:30 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"{:placeholder=>\"Buscar por usuário\"}", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "{:placeholder=>\"Buscar por usuário\"}"]]
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+  Rendered shared/_header.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:50:40 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `avatar' for nil:NilClass):
+    21: 
+    22:     <% @users_search.each do |user| %>
+    23:       <tr>
+    24:         <td><%= image_tag @user.avatar.url(:thumb),class:"circle responsive-img" %> <%= user.name %></td>
+    25:         <td><%= user.email %></td>
+    26:       </tr>
+    27:     <% end %>
+  
+app/views/posts/index.html.erb:24:in `block in _app_views_posts_index_html_erb___4583085741617941376_70170933589900'
+app/views/posts/index.html.erb:22:in `_app_views_posts_index_html_erb___4583085741617941376_70170933589900'
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/aldocid/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (105.4ms)
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:50:53 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (4.0ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:52:51 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:53:10 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", ""]]
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  Rendered shared/_header.html.erb (1.8ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:53:13 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_header.html.erb (2.1ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:54:08 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:54:11 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", ""]]
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+  Rendered shared/_header.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:54:13 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_header.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 35.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:55:03 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+  Rendered shared/_header.html.erb (1.6ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=Aldo&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:55:47 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"Aldo", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Aldo"]]
+  Rendered posts/index.html.erb within layouts/application (3.1ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home?utf8=%E2%9C%93&search_field=&commit=Buscar" for 127.0.0.1 at 2017-07-13 13:55:55 -0300
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_field"=>"", "commit"=>"Buscar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", ""]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+  Rendered shared/_header.html.erb (1.2ms)
+  Rendered shared/_footer.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFollowers (20170713174647)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "followers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "follower_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170713174647"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]

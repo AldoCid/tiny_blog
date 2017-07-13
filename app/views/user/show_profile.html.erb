@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="card-header amber lighten-2">
+  <div class="card-header blue lighten-3">
     <br>
     <% if @user.avatar %>
       <div class="center">
@@ -10,10 +10,10 @@
     <% end %>
     <br>
     <div class="center flow-text">
-      Email:<%= @user.email %>
+      <%= @user.name %>
     </div>
   </div>
-  <div class="card-content amber lighten-3">
+  <div class="card-content blue lighten-4">
     <ul class="inline center">
       <li>
       <%= link_to show_user_posts_path,method: :get,class:"waves-effect waves-light light-blue accent-3 btn" do %>

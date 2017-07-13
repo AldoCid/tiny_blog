@@ -1,6 +1,36 @@
-<h1 class="center">Posts</h1>
 
-<br>
+<%= form_tag(home_path, method: :get) do %>
+  <ul class="inline center">
+    <li>
+      <%= text_field_tag 'search_field',nil, placeholder: 'Buscar por usuário',style:"width: 70%;"%>
+    </li>
+    <li>
+      <%= submit_tag 'Buscar' ,class: "waves-effect waves-light amber darken-2 btn"%>
+    </li>
+  </ul>
+<% end %>
+
+<table class="highlight">
+  <thead>
+    <tr>
+      <th data-field="user">Avatar</th>
+      <th data-field="user">Name</th>
+      <th data-field="rental_time">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @users_search.each do |user| %>
+      <tr>
+        <td><%= image_tag user.avatar.url(:thumb),class:"circle responsive-img" %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <%= hidden_field_tag "", user_path(user), class: "tr_link" %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 
 <% if user_signed_in? %>
 <div class="fixed-action-btn" style="bottom: 60px; right: 24px;">
