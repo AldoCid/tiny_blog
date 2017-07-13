@@ -7,13 +7,13 @@
     <% end %> -->
 
 
-    <%= link_to 'Home',home_index_path,class:"brand-logo center"%>
+    <%= link_to 'Home',home_path,class:"brand-logo center"%>
     <% if user_signed_in? %>
 
       <ul id="nav-right-mobile"class="right hide-on-med-and-down">
 
         <li class="light-blue accent-1" >
-          <%= link_to user_profile_path, method: :get do %>
+          <%= link_to @current_user, method: :get do %>
           Perfil<i class="material-icons right">perm_identity</i>
           <% end %>
         </li>

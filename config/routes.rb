@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
-  root to: "home#index"
+  get 'home', to: "posts#index", as: "home"
+  root to: "posts#index"
+
 
 
   devise_for :user,controllers: {
@@ -15,7 +16,18 @@ Rails.application.routes.draw do
   end
 
 
-  get '/user/profile', to:"profile#show", as: "user_profile"
+  scope '/user' do
+    get '/:id', to:"user#show_profile", as: "user"
+    get '/:id/posts', to:"user#show_user_posts", as:"show_user_posts"
+    get '/:id/followers', to:"user#show_user_followers", as:"show_user_followers"
+
+  end
+
+  scope '/posts' do
+    post '',to: 'posts#create',as:"posts"
+    get '/new',to:"posts#new",as: "new_post"
+  end
+
 
 
 end

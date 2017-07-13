@@ -40,6 +40,7 @@ before_action :configure_sign_up_params, only: [:create]
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
+    byebug
     devise_parameter_sanitizer.permit(:sign_up, keys: [:avatar])
   end
 
