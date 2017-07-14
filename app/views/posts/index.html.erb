@@ -1,11 +1,10 @@
-
 <%= form_tag(home_path, method: :get) do %>
   <ul class="inline center">
     <li>
       <%= text_field_tag 'search_field',nil, placeholder: 'Buscar por usuário',style:"width: 70%;"%>
     </li>
     <li>
-      <%= submit_tag 'Buscar' ,class: "waves-effect waves-light amber darken-2 btn"%>
+      <%= submit_tag 'Buscar' ,class: "waves-effect waves-light btn amber lighten-1"%>
     </li>
   </ul>
 <% end %>
@@ -16,15 +15,16 @@
       <th data-field="user">Avatar</th>
       <th data-field="user">Name</th>
       <th data-field="rental_time">Email</th>
+      <th data-field="rental_time">Seguidores</th>
     </tr>
   </thead>
   <tbody>
-
     <% @users_search.each do |user| %>
       <tr>
         <td><%= image_tag user.avatar.url(:thumb),class:"circle responsive-img" %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
+        <td><%= user.followers.size %></td>
         <%= hidden_field_tag "", user_path(user), class: "tr_link" %>
       </tr>
     <% end %>
@@ -34,7 +34,7 @@
 
 <% if user_signed_in? %>
 <div class="fixed-action-btn" style="bottom: 60px; right: 24px;">
-  <%= link_to new_post_path, class: "btn-floating btn-large amber darken-2" do %>
+  <%= link_to new_post_path, class: "btn-floating btn-large amber lighten-1" do %>
     <i class="material-icons">add</i>
   <% end %>
 </div>

@@ -7,6 +7,7 @@ class PostsController < ApplicationController
     if params[:search_field]
       @users_search = User.where(name: params[:search_field])
     else
+      @users_search = []
     end
   end
 

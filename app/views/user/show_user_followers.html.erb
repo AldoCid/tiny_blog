@@ -1,0 +1,22 @@
+<h2>Seguidores de <%= @user.name %></h2>
+<table class="highlight">
+  <thead>
+    <tr>
+      <th data-field="user">Avatar</th>
+      <th data-field="name">Name</th>
+      <th data-field="email">Email</th>
+      <th data-field="followers">Followers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user_followers.each do |user| %>
+      <tr>
+        <td><%= image_tag user.avatar.url(:thumb),class:"circle responsive-img" %></td>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.followers.size %></td>
+        <%= hidden_field_tag "", user_path(user), class: "tr_link" %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

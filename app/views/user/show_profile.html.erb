@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="card-header blue lighten-3">
+  <div class="card-header light-blue lighten-3">
     <br>
     <% if @user.avatar %>
       <div class="center">
@@ -13,22 +13,34 @@
       <%= @user.name %>
     </div>
   </div>
-  <div class="card-content blue lighten-4">
+  <div class="card-content teal lighten-4">
     <ul class="inline center">
       <li>
-      <%= link_to show_user_posts_path,method: :get,class:"waves-effect waves-light light-blue accent-3 btn" do %>
+      <%= link_to show_user_posts_path,method: :get,class:"waves-effect waves-light btn amber lighten-1" do %>
       Postagens<i class="material-icons left">dashboard</i>
       <% end %>
     </li>
       <li>
-        <%= link_to show_user_followers_path,method: :get,class:"waves-effect waves-light light-blue accent-3 btn" do %>
+        <%= link_to show_user_followers_path,method: :get,class:"waves-effect waves-light btn amber lighten-1" do %>
           Seguidores<i class="material-icons left">supervisor_account</i>
         <% end %>
       </li>
       <li>
-        <%= link_to edit_user_registration_path,method: :get,class:"waves-effect waves-light light-blue accent-3 btn" do %>
-          Editar<i class="material-icons left">mode_edit</i>
-        <% end %>
+        <% if @current_user.id == @user.id %>
+          <%= link_to edit_user_registration_path,method: :get,class:"waves-effect waves-light btn amber lighten-1" do %>
+            Editar<i  class="material-icons left">mode_edit</i>
+          <% end %>
+        <% else %>
+            <% if @current_user.follows?(@user) %>
+              <%= link_to follow_unfollow_user_path(@user),method: :put,class:"waves-effect waves-light light-green darken-1 btn", onclick: "$('#follow_form').submit()" do %>
+                Seguindo<i class="material-icons right">done</i>
+              <% end %>
+            <% else %>
+              <%= link_to follow_unfollow_user_path(@user),method: :put,class:"waves-effect waves-light light-blue accent-3 btn", onclick: "$('#follow_form').submit()" do %>
+                Seguir<i class="material-icons right">add</i>
+              <% end %>
+            <% end %>
+          <% end %>
       </li>
     </ul>
   </div>

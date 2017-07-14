@@ -5,11 +5,20 @@ class UserController < ApplicationController
   end
 
   def show_user_followers
-    # @user_followers = @current_user.followers
+    @user_followers = @user.followers
   end
 
   def show_user_posts
     @user_posts = @user.posts
+  end
+
+  def follow_unfollow_user
+    if !@current_user.follows?(@user)
+      @current_user.followers << @user
+    else
+      @current_user.followers.delete(@user)
+    end
+    redirect_to user_url(@user)
   end
 
   private
