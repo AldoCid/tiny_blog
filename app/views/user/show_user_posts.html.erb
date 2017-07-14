@@ -1,20 +1,16 @@
 <h2 class="center">Suas postagens</h2>
 <% if @user_posts.size > 0 %>
   <% @user_posts.each do |post|%>
-    <div class="card">
-
-      <div class="card-header">
+    <div class="card blue-grey darken-1 ">
+      <div class="card-content light-blue accent-1 ">
         <div class="row">
           <%=link_to @user do %>
-            <%= image_tag @current_user.avatar.url(:thumb),class:"circle responsive-img" %>
+          <%= image_tag @current_user.avatar.url(:thumb),class:"circle responsive-img" %>
           <% end %>
           <%= @current_user.email %>
         </div>
-          <br>
-          <h2 class="center">"<%= post.description%>"</
-      </div>
-
-      <div class="card-content light-blue accent-1 ">
+        <br>
+        <h2 class="center">"<%= post.description%>"</h2>
         <i class="material-icons left">thumb_up</i>
         <%= post.n_likes %>
       </div>

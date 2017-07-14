@@ -1,13 +1,10 @@
+
 <div class="card">
   <div class="card-header light-blue lighten-3">
     <br>
-    <% if @user.avatar %>
       <div class="center">
           <%= image_tag @user.avatar.url(:medium),class:"circle responsive-img" %>
       </div>
-    <% else %>
-      <img class="circle responsive-img" src="https://lh3.googleusercontent.com/-W2XryVdi-lA/U6tSAh3SsbI/AAAAAAAAFGY/ZHJiUEcR_Zs/w480-h480/avatar%2Bmaterial%2Bdesign.png" alt="" />
-    <% end %>
     <br>
     <div class="center flow-text">
       <%= @user.name %>
@@ -26,6 +23,7 @@
         <% end %>
       </li>
       <li>
+        <% if user_signed_in? %>
         <% if @current_user.id == @user.id %>
           <%= link_to edit_user_registration_path,method: :get,class:"waves-effect waves-light btn amber lighten-1" do %>
             Editar<i  class="material-icons left">mode_edit</i>
@@ -40,6 +38,7 @@
                 Seguir<i class="material-icons right">add</i>
               <% end %>
             <% end %>
+          <% end %>
           <% end %>
       </li>
     </ul>

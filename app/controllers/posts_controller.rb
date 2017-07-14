@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     if params[:search_field]
-      @users_search = User.where(name: params[:search_field])
+      @users_search = User.where('name LIKE ?',"%#{params[:search_field]}")
     else
       @users_search = []
     end

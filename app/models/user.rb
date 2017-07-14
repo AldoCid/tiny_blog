@@ -5,7 +5,8 @@ class User < ApplicationRecord
                                     association_foreign_key: "follower_id"
 
   has_attached_file :avatar, styles: { medium: "300x300>" ,thumb: "100x100"}
-  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/,
+                                             default_url: "/public/empty-profile.png"
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
