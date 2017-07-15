@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   scope '/posts' do
     post '',to: 'posts#create',as:"posts"
     get '/new',to:"posts#new",as: "new_post"
+    put ':id/like_post',to:"posts#like_post",as:"like_post"
   end
 
 

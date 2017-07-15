@@ -4,3 +4,5 @@
 #   http_host: 'example.org',
 #   https: false
 # )
+
+Paperclip::Attachment.default_options[:default_url] = "/images/:style/empty-profile.jpg"

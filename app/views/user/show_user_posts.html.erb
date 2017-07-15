@@ -1,24 +1,41 @@
-<h2 class="center">Suas postagens</h2>
+<%  if @current_user.id == @user.id %>
+  <h2 class="center">Suas postagens</h2>
+<% else %>
+  <h2 class="center">Postagens de <%= @user.name%></h2>
+<% end %>
 <% if @user_posts.size > 0 %>
   <% @user_posts.each do |post|%>
-    <div class="card blue-grey darken-1 ">
-      <div class="card-content light-blue accent-1 ">
-        <div class="row">
-          <%=link_to @user do %>
-          <%= image_tag @current_user.avatar.url(:thumb),class:"circle responsive-img" %>
-          <% end %>
-          <%= @current_user.email %>
-        </div>
-        <br>
-        <h2 class="center">"<%= post.description%>"</h2>
-        <i class="material-icons left">thumb_up</i>
-        <%= post.n_likes %>
+    <div class="row">
+        <div class="col s12">
+              <div class="card light-blue lighten-3 ">
+                <div class="card-content dark-text">
+                  <div class="card__meta">
+                  <%= link_to @user.name,@user %>
+                            <time><%= post.created_at.strftime('%v')%></time>
+                </div>
+                  <br>
+                  <p><%= post.description%></p>
+                  <br>
+                  <p><%= post.n_likes%> curtidas</p>
+                </div>
+                <% if !(@current_user.id == @user.id) %>
+                  <div class="card-action light-blue lighten-2">
+                    <%= link_to like_post_url(post),method: :put,class:"amber lighten-1 btn" do %>
+                      CURTIR<i class="material-icons left">thumb_up</i>
+                    <% end %>
+                  </div>
+                <% end %>
+            </div>
+          </div>
       </div>
-    </div>
-    <br>
-  <%end%>
-<% else %>
-<div class="center">
-  <h3>Você ainda não tem postagens</h3>
+     </div>  
+  <% end %>
+<% end %>
+
+<% if user_signed_in? && @current_user.id == @user.id %>
+<div class="fixed-action-btn" style="bottom: 60px; right: 24px;">
+  <%= link_to new_post_path, class: "btn-floating btn-large amber lighten-1" do %>
+    <i class="material-icons">add</i>
+  <% end %>
 </div>
 <% end %>

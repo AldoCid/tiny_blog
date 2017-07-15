@@ -9,7 +9,7 @@ class UserController < ApplicationController
   end
 
   def show_user_posts
-    @user_posts = @user.posts
+    @user_posts = @user.posts.order(created_at: :desc)
   end
 
   def follow_unfollow_user
