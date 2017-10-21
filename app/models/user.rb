@@ -12,8 +12,7 @@ class User < ApplicationRecord
 
 
   def follows?(user)
-    return true if self.followers.include?(user)
-    return false
+    self.followers.include?(user)
   end
 
 end

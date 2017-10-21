@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :like_post]
 
   # GET /posts
-  # GET /posts.json
   def index
     if params[:search_field]
       @users_search = User.where('name LIKE ?',"%#{params[:search_field]}")
@@ -12,7 +11,6 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1
-  # GET /posts/1.json
   def show
   end
 
@@ -26,13 +24,12 @@ class PostsController < ApplicationController
   end
 
   # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(post_params)
     @post.user = @current_user
     respond_to do |format|
       if @post.save
-        format.html { redirect_to show_user_posts_url(@current_user), notice: 'Post was successfully created.' }
+        format.html { redirect_to user_posts_url(@current_user), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -42,10 +39,9 @@ class PostsController < ApplicationController
   end
 
   # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def like_post
     @post.update(n_likes: @post.n_likes + 1)
-    redirect_to show_user_posts_url(@post.user)
+    redirect_to user_posts_url(@post.user)
   end
 
 

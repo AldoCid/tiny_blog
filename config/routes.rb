@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get 'home', to: "posts#index", as: "home"
-  root to: "posts#index"
+  root to: "user#index"
 
 
 
@@ -17,9 +17,10 @@ Rails.application.routes.draw do
 
 
   scope '/user' do
-    get '/:id', to:"user#show_profile", as: "user"
-    get '/:id/posts', to:"user#show_user_posts", as:"show_user_posts"
-    get '/:id/followers', to:"user#show_user_followers", as:"show_user_followers"
+    get '', to: "user#index", as: "users"
+    get '/:id', to:"user#show", as: "user"
+    get '/:id/posts', to:"user#posts", as:"user_posts"
+    get '/:id/followers', to:"user#followers", as:"user_followers"
     put '/follow/:id',to: "user#follow_unfollow_user", as:"follow_unfollow_user"
 
   end
