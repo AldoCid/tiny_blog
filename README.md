@@ -1,5 +1,6 @@
 # Tiny Blog
 
 Just a simple blog made with ruby on rails using Devise and Paperclip
-Check the live version: {}
+
+Check the live version here: https://blog-he-labs.herokuapp.com/
 
