@@ -2,7 +2,7 @@
 
 Just a simple blog made with ruby on rails using Devise and Paperclip
 
-You are free clone or fork and make changes,to do it:
+You are free  to clone or fork and make changes,to do it:
 
 ```
 cd repo_path
