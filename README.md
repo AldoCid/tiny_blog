@@ -16,5 +16,5 @@ rails db:migrate
 rails s
 ```
 
-Check the live version here: https://blog-he-labs.herokuapp.com/
+Check the live version [here](https://blog-he-labs.herokuapp.com/)
 
